@@ -1,0 +1,574 @@
+{
+	"folders": [
+		{
+			"name": "Perfumery",
+			"path": "."
+		},
+		{
+			"name": "UE5",
+			"path": "/Users/alicia/UnrealEngine/UE_5.4"
+		}
+	],
+	"settings": {
+		"typescript.tsc.autoDetect": "off",
+		"npm.autoDetect": "off"
+	},
+	"extensions": {
+		"recommendations": [
+			"ms-vscode.cpptools",
+			"ms-dotnettools.csharp"
+		]
+	},
+	"tasks": {
+		"version": "2.0.0",
+		"tasks": [
+			{
+				"label": "Perfumery Mac Debug Build",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"Perfumery",
+					"Mac",
+					"Debug",
+					"/Users/alicia/Sites/Perfumery/Perfumery.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/alicia/UnrealEngine/UE_5.4"
+				}
+			},
+			{
+				"label": "Perfumery Mac Debug Rebuild",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"Perfumery",
+					"Mac",
+					"Debug",
+					"/Users/alicia/Sites/Perfumery/Perfumery.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"dependsOn": [
+					"Perfumery Mac Debug Clean"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/alicia/UnrealEngine/UE_5.4"
+				}
+			},
+			{
+				"label": "Perfumery Mac Debug Clean",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"Perfumery",
+					"Mac",
+					"Debug",
+					"/Users/alicia/Sites/Perfumery/Perfumery.uproject",
+					"-waitmutex",
+					"-clean"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/alicia/UnrealEngine/UE_5.4"
+				}
+			},
+			{
+				"label": "Perfumery Mac DebugGame Build",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"Perfumery",
+					"Mac",
+					"DebugGame",
+					"/Users/alicia/Sites/Perfumery/Perfumery.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/alicia/UnrealEngine/UE_5.4"
+				}
+			},
+			{
+				"label": "Perfumery Mac DebugGame Rebuild",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"Perfumery",
+					"Mac",
+					"DebugGame",
+					"/Users/alicia/Sites/Perfumery/Perfumery.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"dependsOn": [
+					"Perfumery Mac DebugGame Clean"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/alicia/UnrealEngine/UE_5.4"
+				}
+			},
+			{
+				"label": "Perfumery Mac DebugGame Clean",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"Perfumery",
+					"Mac",
+					"DebugGame",
+					"/Users/alicia/Sites/Perfumery/Perfumery.uproject",
+					"-waitmutex",
+					"-clean"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/alicia/UnrealEngine/UE_5.4"
+				}
+			},
+			{
+				"label": "Perfumery Mac Development Build",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"Perfumery",
+					"Mac",
+					"Development",
+					"/Users/alicia/Sites/Perfumery/Perfumery.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/alicia/UnrealEngine/UE_5.4"
+				}
+			},
+			{
+				"label": "Perfumery Mac Development Rebuild",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"Perfumery",
+					"Mac",
+					"Development",
+					"/Users/alicia/Sites/Perfumery/Perfumery.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"dependsOn": [
+					"Perfumery Mac Development Clean"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/alicia/UnrealEngine/UE_5.4"
+				}
+			},
+			{
+				"label": "Perfumery Mac Development Clean",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"Perfumery",
+					"Mac",
+					"Development",
+					"/Users/alicia/Sites/Perfumery/Perfumery.uproject",
+					"-waitmutex",
+					"-clean"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/alicia/UnrealEngine/UE_5.4"
+				}
+			},
+			{
+				"label": "Perfumery Mac Test Build",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"Perfumery",
+					"Mac",
+					"Test",
+					"/Users/alicia/Sites/Perfumery/Perfumery.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/alicia/UnrealEngine/UE_5.4"
+				}
+			},
+			{
+				"label": "Perfumery Mac Test Rebuild",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"Perfumery",
+					"Mac",
+					"Test",
+					"/Users/alicia/Sites/Perfumery/Perfumery.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"dependsOn": [
+					"Perfumery Mac Test Clean"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/alicia/UnrealEngine/UE_5.4"
+				}
+			},
+			{
+				"label": "Perfumery Mac Test Clean",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"Perfumery",
+					"Mac",
+					"Test",
+					"/Users/alicia/Sites/Perfumery/Perfumery.uproject",
+					"-waitmutex",
+					"-clean"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/alicia/UnrealEngine/UE_5.4"
+				}
+			},
+			{
+				"label": "Perfumery Mac Shipping Build",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"Perfumery",
+					"Mac",
+					"Shipping",
+					"/Users/alicia/Sites/Perfumery/Perfumery.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/alicia/UnrealEngine/UE_5.4"
+				}
+			},
+			{
+				"label": "Perfumery Mac Shipping Rebuild",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"Perfumery",
+					"Mac",
+					"Shipping",
+					"/Users/alicia/Sites/Perfumery/Perfumery.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"dependsOn": [
+					"Perfumery Mac Shipping Clean"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/alicia/UnrealEngine/UE_5.4"
+				}
+			},
+			{
+				"label": "Perfumery Mac Shipping Clean",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"Perfumery",
+					"Mac",
+					"Shipping",
+					"/Users/alicia/Sites/Perfumery/Perfumery.uproject",
+					"-waitmutex",
+					"-clean"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/alicia/UnrealEngine/UE_5.4"
+				}
+			},
+			{
+				"label": "PerfumeryEditor Mac Debug Build",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"PerfumeryEditor",
+					"Mac",
+					"Debug",
+					"/Users/alicia/Sites/Perfumery/Perfumery.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/alicia/UnrealEngine/UE_5.4"
+				}
+			},
+			{
+				"label": "PerfumeryEditor Mac Debug Rebuild",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"PerfumeryEditor",
+					"Mac",
+					"Debug",
+					"/Users/alicia/Sites/Perfumery/Perfumery.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"dependsOn": [
+					"PerfumeryEditor Mac Debug Clean"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/alicia/UnrealEngine/UE_5.4"
+				}
+			},
+			{
+				"label": "PerfumeryEditor Mac Debug Clean",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"PerfumeryEditor",
+					"Mac",
+					"Debug",
+					"/Users/alicia/Sites/Perfumery/Perfumery.uproject",
+					"-waitmutex",
+					"-clean"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/alicia/UnrealEngine/UE_5.4"
+				}
+			},
+			{
+				"label": "PerfumeryEditor Mac DebugGame Build",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"PerfumeryEditor",
+					"Mac",
+					"DebugGame",
+					"/Users/alicia/Sites/Perfumery/Perfumery.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/alicia/UnrealEngine/UE_5.4"
+				}
+			},
+			{
+				"label": "PerfumeryEditor Mac DebugGame Rebuild",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"PerfumeryEditor",
+					"Mac",
+					"DebugGame",
+					"/Users/alicia/Sites/Perfumery/Perfumery.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"dependsOn": [
+					"PerfumeryEditor Mac DebugGame Clean"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/alicia/UnrealEngine/UE_5.4"
+				}
+			},
+			{
+				"label": "PerfumeryEditor Mac DebugGame Clean",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"PerfumeryEditor",
+					"Mac",
+					"DebugGame",
+					"/Users/alicia/Sites/Perfumery/Perfumery.uproject",
+					"-waitmutex",
+					"-clean"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/alicia/UnrealEngine/UE_5.4"
+				}
+			},
+			{
+				"label": "PerfumeryEditor Mac Development Build",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"PerfumeryEditor",
+					"Mac",
+					"Development",
+					"/Users/alicia/Sites/Perfumery/Perfumery.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/alicia/UnrealEngine/UE_5.4"
+				}
+			},
+			{
+				"label": "PerfumeryEditor Mac Development Rebuild",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"PerfumeryEditor",
+					"Mac",
+					"Development",
+					"/Users/alicia/Sites/Perfumery/Perfumery.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"dependsOn": [
+					"PerfumeryEditor Mac Development Clean"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/alicia/UnrealEngine/UE_5.4"
+				}
+			},
+			{
+				"label": "PerfumeryEditor Mac Development Clean",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"PerfumeryEditor",
+					"Mac",
+					"Development",
+					"/Users/alicia/Sites/Perfumery/Perfumery.uproject",
+					"-waitmutex",
+					"-clean"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/alicia/UnrealEngine/UE_5.4"
+				}
+			}
+		]
+	},
+	"launch": {
+		"version": "0.2.0",
+		"configurations": [
+			{
+				"name": "Launch Perfumery (Debug)",
+				"request": "launch",
+				"program": "/Users/alicia/Sites/Perfumery/Binaries/Mac/UnrealGame-Mac-Debug.app/Contents/MacOS/UnrealGame-Mac-Debug",
+				"preLaunchTask": "Perfumery Mac Debug Build",
+				"args": [
+				],
+				"cwd": "/Users/alicia/UnrealEngine/UE_5.4",
+				"type": "lldb"
+			},
+			{
+				"name": "Launch Perfumery (DebugGame)",
+				"request": "launch",
+				"program": "/Users/alicia/Sites/Perfumery/Binaries/Mac/UnrealGame-Mac-DebugGame.app/Contents/MacOS/UnrealGame-Mac-DebugGame",
+				"preLaunchTask": "Perfumery Mac DebugGame Build",
+				"args": [
+				],
+				"cwd": "/Users/alicia/UnrealEngine/UE_5.4",
+				"type": "lldb"
+			},
+			{
+				"name": "Launch Perfumery (Development)",
+				"request": "launch",
+				"program": "/Users/alicia/Sites/Perfumery/Binaries/Mac/UnrealGame.app/Contents/MacOS/UnrealGame",
+				"preLaunchTask": "Perfumery Mac Development Build",
+				"args": [
+				],
+				"cwd": "/Users/alicia/UnrealEngine/UE_5.4",
+				"type": "lldb"
+			},
+			{
+				"name": "Launch Perfumery (Test)",
+				"request": "launch",
+				"program": "/Users/alicia/Sites/Perfumery/Binaries/Mac/UnrealGame-Mac-Test.app/Contents/MacOS/UnrealGame-Mac-Test",
+				"preLaunchTask": "Perfumery Mac Test Build",
+				"args": [
+				],
+				"cwd": "/Users/alicia/UnrealEngine/UE_5.4",
+				"type": "lldb"
+			},
+			{
+				"name": "Launch Perfumery (Shipping)",
+				"request": "launch",
+				"program": "/Users/alicia/Sites/Perfumery/Binaries/Mac/UnrealGame-Mac-Shipping.app/Contents/MacOS/UnrealGame-Mac-Shipping",
+				"preLaunchTask": "Perfumery Mac Shipping Build",
+				"args": [
+				],
+				"cwd": "/Users/alicia/UnrealEngine/UE_5.4",
+				"type": "lldb"
+			},
+			{
+				"name": "Launch PerfumeryEditor (Debug)",
+				"request": "launch",
+				"program": "/Users/alicia/UnrealEngine/UE_5.4/Engine/Binaries/Mac/UnrealEditor-Mac-Debug.app/Contents/MacOS/UnrealEditor-Mac-Debug",
+				"preLaunchTask": "PerfumeryEditor Mac Debug Build",
+				"args": [
+					"/Users/alicia/Sites/Perfumery/Perfumery.uproject"
+				],
+				"cwd": "/Users/alicia/UnrealEngine/UE_5.4",
+				"type": "lldb"
+			},
+			{
+				"name": "Launch PerfumeryEditor (DebugGame)",
+				"request": "launch",
+				"program": "/Users/alicia/UnrealEngine/UE_5.4/Engine/Binaries/Mac/UnrealEditor-Mac-DebugGame.app/Contents/MacOS/UnrealEditor-Mac-DebugGame",
+				"preLaunchTask": "PerfumeryEditor Mac DebugGame Build",
+				"args": [
+					"/Users/alicia/Sites/Perfumery/Perfumery.uproject"
+				],
+				"cwd": "/Users/alicia/UnrealEngine/UE_5.4",
+				"type": "lldb"
+			},
+			{
+				"name": "Launch PerfumeryEditor (Development)",
+				"request": "launch",
+				"program": "/Users/alicia/UnrealEngine/UE_5.4/Engine/Binaries/Mac/UnrealEditor.app/Contents/MacOS/UnrealEditor",
+				"preLaunchTask": "PerfumeryEditor Mac Development Build",
+				"args": [
+					"/Users/alicia/Sites/Perfumery/Perfumery.uproject"
+				],
+				"cwd": "/Users/alicia/UnrealEngine/UE_5.4",
+				"type": "lldb"
+			},
+			{
+				"name": "Generate Project Files",
+				"type": "coreclr",
+				"request": "launch",
+				"preLaunchTask": "UnrealBuildTool Mac Development Build",
+				"program": "/Users/alicia/UnrealEngine/UE_5.4/Engine/Build/BatchFiles/RunUBT.bat",
+				"args": [
+					"-projectfiles",
+					"-vscode",
+					"-project=/Users/alicia/Sites/Perfumery/Perfumery.uproject",
+					"-game",
+					"-engine",
+					"-dotnet"
+				],
+				"console": "internalConsole",
+				"internalConsoleOptions": "openOnSessionStart",
+				"stopAtEntry": false,
+				"cwd": "/Users/alicia/UnrealEngine/UE_5.4"
+			}
+		]
+	}
+}

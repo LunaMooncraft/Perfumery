@@ -1,0 +1,35 @@
+{
+    "configurations": [
+        {
+            "name": "PerfumeryEditor Editor Mac Development (Perfumery)",
+            "compilerPath": "/usr/bin/clang",
+            "compilerArgs": [
+                "-isysroot",
+                "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk"
+            ],
+            "macFrameworkPath": [
+                "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks"
+            ],
+            "cStandard": "c17",
+            "cppStandard": "c++17",
+            "intelliSenseMode": "macos-clang-arm64",
+            "compileCommands": "/Users/alicia/Sites/Perfumery/.vscode/compileCommands_Perfumery.json"
+        },
+        {
+            "name": "Mac",
+            "compilerPath": "/usr/bin/clang",
+            "compilerArgs": [
+                "-isysroot",
+                "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk"
+            ],
+            "macFrameworkPath": [
+                "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks"
+            ],
+            "cStandard": "c17",
+            "cppStandard": "c++17",
+            "intelliSenseMode": "macos-clang-arm64",
+            "compileCommands": "/Users/alicia/Sites/Perfumery/.vscode/compileCommands_Default.json"
+        }
+    ],
+    "version": 4
+}

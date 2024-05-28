@@ -1,0 +1,26 @@
+[
+	{
+		"file": "/Users/alicia/Sites/Perfumery/Source/Perfumery/Perfumery.Build.cs",
+		"arguments": [
+			"/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++",
+			"@/Users/alicia/Sites/Perfumery/.vscode/compileCommands_Default/Perfumery.1.rsp"
+		],
+		"directory": "/Users/alicia/UnrealEngine/UE_5.4/Engine/Source"
+	},
+	{
+		"file": "/Users/alicia/Sites/Perfumery/Source/Perfumery/Perfumery.cpp",
+		"arguments": [
+			"/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++",
+			"@/Users/alicia/Sites/Perfumery/.vscode/compileCommands_Default/Perfumery.1.rsp"
+		],
+		"directory": "/Users/alicia/UnrealEngine/UE_5.4/Engine/Source"
+	},
+	{
+		"file": "/Users/alicia/Sites/Perfumery/Source/Perfumery/Perfumery.h",
+		"arguments": [
+			"/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++",
+			"@/Users/alicia/Sites/Perfumery/.vscode/compileCommands_Default/Perfumery.1.rsp"
+		],
+		"directory": "/Users/alicia/UnrealEngine/UE_5.4/Engine/Source"
+	}
+]
