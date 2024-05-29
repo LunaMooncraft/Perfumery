@@ -25,6 +25,10 @@ public:
 
     void MoveRight(const FInputActionValue& Value);
 
+    void MoveMouse(const FInputActionValue& Value);
+
+    void Zoom(const FInputActionValue& Value);
+
 private:
     UPROPERTY(VisibleAnywhere)
     class USpringArmComponent* SpringArm;
@@ -44,5 +48,19 @@ private:
     UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Input", meta = (AllowPrivateAccess = "true"))
     class UInputAction* MoveRightAction;
 
+    UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Input", meta = (AllowPrivateAccess = "true"))
+    class UInputAction* MoveMouseAction;
+
+    UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Input", meta = (AllowPrivateAccess = "true"))
+    class UInputAction* ZoomAction;
+
     float MovementSpeed;
+
+    float MouseSensitivity;
+
+    float ZoomSpeed;
+
+    float MinZoom;
+    
+    float MaxZoom;
 };

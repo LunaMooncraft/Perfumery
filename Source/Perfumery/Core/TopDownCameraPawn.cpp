@@ -14,6 +14,10 @@ ATopDownCameraPawn::ATopDownCameraPawn()
 {
 	PrimaryActorTick.bCanEverTick = true;
 
+    // Root component
+    USceneComponent* Root = CreateDefaultSubobject<USceneComponent>(TEXT("RootComponent"));
+    RootComponent = Root;
+
     // Spring Arm component
     SpringArm = CreateDefaultSubobject<USpringArmComponent>(TEXT("SpringArm"));
     SpringArm->SetupAttachment(RootComponent);
@@ -28,8 +32,15 @@ ATopDownCameraPawn::ATopDownCameraPawn()
     // Movement component
     MovementComponent = CreateDefaultSubobject<UFloatingPawnMovement>(TEXT("MovementComponent"));
 
-    // Movement speed
+    // Movement settings
     MovementSpeed = 1000.0f;
+    MouseSensitivity = 10.1f;
+
+    // Zoom settings
+    ZoomSpeed = 100.0f;
+    MinZoom = 300.0f;
+    MaxZoom = 1500.0f;
+
 
     // Assign input mapping context and actions
     static ConstructorHelpers::FObjectFinder<UInputMappingContext> PlayerMappingContextFinder(TEXT("/Game/Input/IMC_PlayerInput"));
@@ -40,6 +51,12 @@ ATopDownCameraPawn::ATopDownCameraPawn()
 
     static ConstructorHelpers::FObjectFinder<UInputAction> MoveRightActionFinder(TEXT("/Game/Input/IA_MoveRight"));
     MoveRightAction = MoveRightActionFinder.Object;
+
+    static ConstructorHelpers::FObjectFinder<UInputAction> MoveMouseActionFinder(TEXT("/Game/Input/IA_MoveMouse"));
+    MoveMouseAction = MoveMouseActionFinder.Object;
+
+    static ConstructorHelpers::FObjectFinder<UInputAction> ZoomActionFinder(TEXT("/Game/Input/IA_ZoomMouseWheel"));
+    ZoomAction = ZoomActionFinder.Object;
 }
 
 void ATopDownCameraPawn::BeginPlay()
@@ -70,6 +87,8 @@ void ATopDownCameraPawn::SetupPlayerInputComponent(UInputComponent* PlayerInputC
     {
         EnhancedInputComponent->BindAction(MoveForwardAction, ETriggerEvent::Triggered, this, &ATopDownCameraPawn::MoveForward);
         EnhancedInputComponent->BindAction(MoveRightAction, ETriggerEvent::Triggered, this, &ATopDownCameraPawn::MoveRight);
+        EnhancedInputComponent->BindAction(MoveMouseAction, ETriggerEvent::Triggered, this, &ATopDownCameraPawn::MoveMouse);
+        EnhancedInputComponent->BindAction(ZoomAction, ETriggerEvent::Triggered, this, &ATopDownCameraPawn::Zoom);
     }
 }
 
@@ -90,6 +109,34 @@ void ATopDownCameraPawn::MoveRight(const FInputActionValue& Value)
     {
         UE_LOG(LogTemp, Warning, TEXT("MoveRight: %f"), MovementValue * MovementSpeed * GetWorld()->GetDeltaSeconds());
         AddMovementInput(GetActorRightVector(), MovementValue * MovementSpeed * GetWorld()->GetDeltaSeconds());
+    }
+}
+
+void ATopDownCameraPawn::MoveMouse(const FInputActionValue& Value)
+{
+    FVector2D MouseValue = Value.Get<FVector2D>();
+    if (!MouseValue.IsZero())
+    {
+        // Calculate new position
+        FVector NewLocation = GetActorLocation();
+        NewLocation += FVector(-MouseValue.Y * MouseSensitivity, MouseValue.X * MouseSensitivity, 0.0f);
+        
+        // Update actor's position
+        SetActorLocation(NewLocation);
+
+        UE_LOG(LogTemp, Warning, TEXT("MoveMouse: X: %f, Y: %f"), MouseValue.X, MouseValue.Y);
+    }
+}
+
+void ATopDownCameraPawn::Zoom(const FInputActionValue& Value)
+{
+    float ZoomValue = Value.Get<float>();
+    if (ZoomValue != 0.0f)
+    {
+        float NewArmLength = FMath::Clamp(SpringArm->TargetArmLength - (ZoomValue * ZoomSpeed), MinZoom, MaxZoom);
+        SpringArm->TargetArmLength = NewArmLength;
+
+        UE_LOG(LogTemp, Warning, TEXT("Zoom: %f"), NewArmLength);
     }
 }
 
