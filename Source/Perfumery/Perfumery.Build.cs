@@ -7,6 +7,24 @@ public class Perfumery : ModuleRules
 	public Perfumery(ReadOnlyTargetRules Target) : base(Target)
 	{
 		PCHUsage = PCHUsageMode.UseExplicitOrSharedPCHs;
+
+		PublicIncludePaths.AddRange(
+            new string[] {
+                "Perfumery",
+                "Perfumery/Core",
+                "Perfumery/GameMode",
+                "Perfumery/Pawns"
+            }
+        );
+
+        PrivateIncludePaths.AddRange(
+            new string[] {
+                "Perfumery",
+                "Perfumery/Core",
+                "Perfumery/GameMode",
+                "Perfumery/Pawns"
+            }
+        );
 	
 		PublicDependencyModuleNames.AddRange(new string[] { "Core", "CoreUObject", "Engine", "InputCore", "EnhancedInput" });
 

@@ -99,7 +99,7 @@ void ATopDownCameraPawn::MoveForward(const FInputActionValue& Value)
 	float MovementValue = Value.Get<float>();
     if (MovementValue != 0.0f)
     {
-        UE_LOG(LogTemp, Warning, TEXT("MoveForward: %f"), MovementValue * MovementSpeed * GetWorld()->GetDeltaSeconds());
+        // UE_LOG(LogTemp, Warning, TEXT("MoveForward: %f"), MovementValue * MovementSpeed * GetWorld()->GetDeltaSeconds());
         AddMovementInput(GetActorForwardVector(), MovementValue * MovementSpeed * GetWorld()->GetDeltaSeconds());
     }
 }
@@ -109,7 +109,7 @@ void ATopDownCameraPawn::MoveRight(const FInputActionValue& Value)
     float MovementValue = Value.Get<float>();
     if (MovementValue != 0.0f)
     {
-        UE_LOG(LogTemp, Warning, TEXT("MoveRight: %f"), MovementValue * MovementSpeed * GetWorld()->GetDeltaSeconds());
+        // UE_LOG(LogTemp, Warning, TEXT("MoveRight: %f"), MovementValue * MovementSpeed * GetWorld()->GetDeltaSeconds());
         AddMovementInput(GetActorRightVector(), MovementValue * MovementSpeed * GetWorld()->GetDeltaSeconds());
     }
 }
@@ -126,7 +126,7 @@ void ATopDownCameraPawn::MoveMouse(const FInputActionValue& Value)
         // Update actor's position
         SetActorLocation(NewLocation);
 
-        UE_LOG(LogTemp, Warning, TEXT("MoveMouse: X: %f, Y: %f"), MouseValue.X, MouseValue.Y);
+        // UE_LOG(LogTemp, Warning, TEXT("MoveMouse: X: %f, Y: %f"), MouseValue.X, MouseValue.Y);
     }
 }
 
@@ -138,7 +138,7 @@ void ATopDownCameraPawn::Zoom(const FInputActionValue& Value)
         float NewArmLength = FMath::Clamp(SpringArm->TargetArmLength - (ZoomValue * ZoomSpeed), MinZoom, MaxZoom);
         SpringArm->TargetArmLength = NewArmLength;
 
-        UE_LOG(LogTemp, Warning, TEXT("Zoom: %f"), NewArmLength);
+        // UE_LOG(LogTemp, Warning, TEXT("Zoom: %f"), NewArmLength);
     }
 }
 
