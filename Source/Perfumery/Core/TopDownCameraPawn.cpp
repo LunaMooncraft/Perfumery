@@ -1,3 +1,5 @@
+// © 2024 Alicia Schramek
+
 #include "TopDownCameraPawn.h"
 #include "GameFramework/SpringArmComponent.h"
 #include "Camera/CameraComponent.h"

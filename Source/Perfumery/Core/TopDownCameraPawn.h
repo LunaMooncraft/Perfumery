@@ -1,3 +1,5 @@
+// © 2024 Alicia Schramek
+
 #pragma once
 
 #include "CoreMinimal.h"
@@ -61,6 +63,6 @@ private:
     float ZoomSpeed;
 
     float MinZoom;
-    
+
     float MaxZoom;
 };

@@ -1,3 +1,5 @@
+// © 2024 Alicia Schramek
+
 #include "TycoonGameMode.h"
 #include "TopDownCameraPawn.h"
 
