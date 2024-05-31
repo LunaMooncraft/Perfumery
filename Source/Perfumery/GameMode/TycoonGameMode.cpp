@@ -2,6 +2,7 @@
 
 #include "TycoonGameMode.h"
 #include "TopDownCameraPawn.h"
+#include "TycoonPlayerController.h"
 #include "UObject/ConstructorHelpers.h"
 #include "Engine/DataTable.h"
 #include "IngredientStruct.h"
@@ -9,14 +10,20 @@
 
 ATycoonGameMode::ATycoonGameMode()
 {
+    // Set the custom default pawn
     DefaultPawnClass = ATopDownCameraPawn::StaticClass();
 
+    // Set the custom player controller
+    PlayerControllerClass = ATycoonPlayerController::StaticClass();
+
+    // Find and assign the data table for ingredients
     static ConstructorHelpers::FObjectFinder<UDataTable> IngredientDataTableObj(TEXT("DataTable'/Game/DataTables/IngredientDataTable'"));
     if (IngredientDataTableObj.Succeeded())
     {
         IngredientDataTable = IngredientDataTableObj.Object;
     }
 
+    // Find and assign the data table for perfumes
     static ConstructorHelpers::FObjectFinder<UDataTable> PerfumeDataTableObj(TEXT("DataTable'/Game/DataTables/PerfumeDataTable'"));
     if (PerfumeDataTableObj.Succeeded())
     {

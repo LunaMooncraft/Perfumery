@@ -13,6 +13,7 @@ public class Perfumery : ModuleRules
                 "Perfumery",
                 "Perfumery/Core",
                 "Perfumery/GameMode",
+                "Perfumery/Inventory",
                 "Perfumery/Pawns"
             }
         );
@@ -22,11 +23,12 @@ public class Perfumery : ModuleRules
                 "Perfumery",
                 "Perfumery/Core",
                 "Perfumery/GameMode",
+                "Perfumery/Inventory",
                 "Perfumery/Pawns"
             }
         );
 	
-		PublicDependencyModuleNames.AddRange(new string[] { "Core", "CoreUObject", "Engine", "InputCore", "EnhancedInput" });
+		PublicDependencyModuleNames.AddRange(new string[] { "Core", "CoreUObject", "Engine", "InputCore", "EnhancedInput", "UMG" });
 
 		PrivateDependencyModuleNames.AddRange(new string[] {  });
 
