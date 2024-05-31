@@ -12,13 +12,12 @@ class PERFUMERY_API ATopDownCameraPawn : public APawn
 {
 	GENERATED_BODY()
 
-public:
-	ATopDownCameraPawn();
-
 protected:
 	virtual void BeginPlay() override;
 
-public:	
+public:
+    ATopDownCameraPawn();
+
 	virtual void Tick(float DeltaTime) override;
 
 	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;

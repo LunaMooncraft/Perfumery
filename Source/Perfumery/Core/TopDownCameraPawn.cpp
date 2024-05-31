@@ -1,13 +1,13 @@
 // © 2024 Alicia Schramek
 
 #include "TopDownCameraPawn.h"
-#include "GameFramework/SpringArmComponent.h"
 #include "Camera/CameraComponent.h"
+#include "GameFramework/SpringArmComponent.h"
 #include "GameFramework/FloatingPawnMovement.h"
+#include "GameFramework/PlayerController.h"
 #include "Components/InputComponent.h"
 #include "EnhancedInputComponent.h"
 #include "EnhancedInputSubsystems.h"
-#include "GameFramework/PlayerController.h"
 #include "InputMappingContext.h"
 #include "InputAction.h"
 #include "InputActionValue.h"
@@ -64,7 +64,6 @@ ATopDownCameraPawn::ATopDownCameraPawn()
 void ATopDownCameraPawn::BeginPlay()
 {
 	Super::BeginPlay();
-        
 
 	if (APlayerController* PlayerController = Cast<APlayerController>(GetController()))
     {

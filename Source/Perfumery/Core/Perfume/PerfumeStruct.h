@@ -3,7 +3,7 @@
 #pragma once
 
 #include "CoreMinimal.h"
-#include "ItemStruct.h"
+#include "../BaseStructs/ItemStruct.h"
 #include "PerfumeStruct.generated.h"
 
 USTRUCT(BlueprintType)

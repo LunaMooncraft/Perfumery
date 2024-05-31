@@ -12,9 +12,7 @@ public class Perfumery : ModuleRules
             new string[] {
                 "Perfumery",
                 "Perfumery/Core",
-                "Perfumery/GameMode",
                 "Perfumery/Inventory",
-                "Perfumery/Pawns"
             }
         );
 
@@ -22,9 +20,7 @@ public class Perfumery : ModuleRules
             new string[] {
                 "Perfumery",
                 "Perfumery/Core",
-                "Perfumery/GameMode",
                 "Perfumery/Inventory",
-                "Perfumery/Pawns"
             }
         );
 	

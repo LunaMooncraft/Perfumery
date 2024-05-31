@@ -5,8 +5,8 @@
 #include "TycoonPlayerController.h"
 #include "UObject/ConstructorHelpers.h"
 #include "Engine/DataTable.h"
-#include "IngredientStruct.h"
-#include "PerfumeStruct.h"
+#include "../Ingredient/IngredientStruct.h"
+#include "../Perfume/PerfumeStruct.h"
 
 ATycoonGameMode::ATycoonGameMode()
 {
@@ -17,14 +17,14 @@ ATycoonGameMode::ATycoonGameMode()
     PlayerControllerClass = ATycoonPlayerController::StaticClass();
 
     // Find and assign the data table for ingredients
-    static ConstructorHelpers::FObjectFinder<UDataTable> IngredientDataTableObj(TEXT("DataTable'/Game/DataTables/IngredientDataTable'"));
+    static ConstructorHelpers::FObjectFinder<UDataTable> IngredientDataTableObj(TEXT("DataTable'/Game/DataTables/IngredientDataTable.IngredientDataTable'"));
     if (IngredientDataTableObj.Succeeded())
     {
         IngredientDataTable = IngredientDataTableObj.Object;
     }
 
     // Find and assign the data table for perfumes
-    static ConstructorHelpers::FObjectFinder<UDataTable> PerfumeDataTableObj(TEXT("DataTable'/Game/DataTables/PerfumeDataTable'"));
+    static ConstructorHelpers::FObjectFinder<UDataTable> PerfumeDataTableObj(TEXT("DataTable'/Game/DataTables/PerfumeDataTable.PerfumeDataTable'"));
     if (PerfumeDataTableObj.Succeeded())
     {
         PerfumeDataTable = PerfumeDataTableObj.Object;

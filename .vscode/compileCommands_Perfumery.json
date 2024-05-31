@@ -1,6 +1,6 @@
 [
 	{
-		"file": "/Users/alicia/Sites/Perfumery/Source/Perfumery/Core/IngredientStruct.h",
+		"file": "/Users/alicia/Sites/Perfumery/Source/Perfumery/Core/BaseStructs/ItemStruct.h",
 		"arguments": [
 			"/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++",
 			"@/Users/alicia/Sites/Perfumery/.vscode/compileCommands_Perfumery/Perfumery.1.rsp"
@@ -8,7 +8,7 @@
 		"directory": "/Users/alicia/UnrealEngine/UE_5.4/Engine/Source"
 	},
 	{
-		"file": "/Users/alicia/Sites/Perfumery/Source/Perfumery/Core/ItemStruct.h",
+		"file": "/Users/alicia/Sites/Perfumery/Source/Perfumery/Core/GameModes/TycoonGameMode.cpp",
 		"arguments": [
 			"/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++",
 			"@/Users/alicia/Sites/Perfumery/.vscode/compileCommands_Perfumery/Perfumery.1.rsp"
@@ -16,7 +16,7 @@
 		"directory": "/Users/alicia/UnrealEngine/UE_5.4/Engine/Source"
 	},
 	{
-		"file": "/Users/alicia/Sites/Perfumery/Source/Perfumery/Core/PerfumeStruct.h",
+		"file": "/Users/alicia/Sites/Perfumery/Source/Perfumery/Core/GameModes/TycoonGameMode.h",
 		"arguments": [
 			"/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++",
 			"@/Users/alicia/Sites/Perfumery/.vscode/compileCommands_Perfumery/Perfumery.1.rsp"
@@ -24,7 +24,7 @@
 		"directory": "/Users/alicia/UnrealEngine/UE_5.4/Engine/Source"
 	},
 	{
-		"file": "/Users/alicia/Sites/Perfumery/Source/Perfumery/Core/PlayerInventoryItemStruct.h",
+		"file": "/Users/alicia/Sites/Perfumery/Source/Perfumery/Core/Ingredient/IngredientStruct.h",
 		"arguments": [
 			"/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++",
 			"@/Users/alicia/Sites/Perfumery/.vscode/compileCommands_Perfumery/Perfumery.1.rsp"
@@ -32,7 +32,7 @@
 		"directory": "/Users/alicia/UnrealEngine/UE_5.4/Engine/Source"
 	},
 	{
-		"file": "/Users/alicia/Sites/Perfumery/Source/Perfumery/GameMode/TycoonGameMode.cpp",
+		"file": "/Users/alicia/Sites/Perfumery/Source/Perfumery/Core/Perfume/PerfumeStruct.h",
 		"arguments": [
 			"/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++",
 			"@/Users/alicia/Sites/Perfumery/.vscode/compileCommands_Perfumery/Perfumery.1.rsp"
@@ -40,7 +40,7 @@
 		"directory": "/Users/alicia/UnrealEngine/UE_5.4/Engine/Source"
 	},
 	{
-		"file": "/Users/alicia/Sites/Perfumery/Source/Perfumery/GameMode/TycoonGameMode.h",
+		"file": "/Users/alicia/Sites/Perfumery/Source/Perfumery/Core/PlayerMoney/PlayerMoneyHandler.cpp",
 		"arguments": [
 			"/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++",
 			"@/Users/alicia/Sites/Perfumery/.vscode/compileCommands_Perfumery/Perfumery.1.rsp"
@@ -48,7 +48,7 @@
 		"directory": "/Users/alicia/UnrealEngine/UE_5.4/Engine/Source"
 	},
 	{
-		"file": "/Users/alicia/Sites/Perfumery/Source/Perfumery/Inventory/PlayerInventoryComponent.cpp",
+		"file": "/Users/alicia/Sites/Perfumery/Source/Perfumery/Core/PlayerMoney/PlayerMoneyHandler.h",
 		"arguments": [
 			"/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++",
 			"@/Users/alicia/Sites/Perfumery/.vscode/compileCommands_Perfumery/Perfumery.1.rsp"
@@ -56,7 +56,7 @@
 		"directory": "/Users/alicia/UnrealEngine/UE_5.4/Engine/Source"
 	},
 	{
-		"file": "/Users/alicia/Sites/Perfumery/Source/Perfumery/Inventory/PlayerInventoryComponent.h",
+		"file": "/Users/alicia/Sites/Perfumery/Source/Perfumery/Core/TopDownCameraPawn.cpp",
 		"arguments": [
 			"/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++",
 			"@/Users/alicia/Sites/Perfumery/.vscode/compileCommands_Perfumery/Perfumery.1.rsp"
@@ -64,7 +64,7 @@
 		"directory": "/Users/alicia/UnrealEngine/UE_5.4/Engine/Source"
 	},
 	{
-		"file": "/Users/alicia/Sites/Perfumery/Source/Perfumery/MainGameInstance.cpp",
+		"file": "/Users/alicia/Sites/Perfumery/Source/Perfumery/Core/TopDownCameraPawn.h",
 		"arguments": [
 			"/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++",
 			"@/Users/alicia/Sites/Perfumery/.vscode/compileCommands_Perfumery/Perfumery.1.rsp"
@@ -72,7 +72,7 @@
 		"directory": "/Users/alicia/UnrealEngine/UE_5.4/Engine/Source"
 	},
 	{
-		"file": "/Users/alicia/Sites/Perfumery/Source/Perfumery/MainGameInstance.h",
+		"file": "/Users/alicia/Sites/Perfumery/Source/Perfumery/Core/TycoonGameInstance.cpp",
 		"arguments": [
 			"/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++",
 			"@/Users/alicia/Sites/Perfumery/.vscode/compileCommands_Perfumery/Perfumery.1.rsp"
@@ -80,7 +80,7 @@
 		"directory": "/Users/alicia/UnrealEngine/UE_5.4/Engine/Source"
 	},
 	{
-		"file": "/Users/alicia/Sites/Perfumery/Source/Perfumery/Pawns/TopDownCameraPawn.cpp",
+		"file": "/Users/alicia/Sites/Perfumery/Source/Perfumery/Core/TycoonGameInstance.h",
 		"arguments": [
 			"/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++",
 			"@/Users/alicia/Sites/Perfumery/.vscode/compileCommands_Perfumery/Perfumery.1.rsp"
@@ -88,7 +88,15 @@
 		"directory": "/Users/alicia/UnrealEngine/UE_5.4/Engine/Source"
 	},
 	{
-		"file": "/Users/alicia/Sites/Perfumery/Source/Perfumery/Pawns/TopDownCameraPawn.h",
+		"file": "/Users/alicia/Sites/Perfumery/Source/Perfumery/Core/TycoonPlayerController.cpp",
+		"arguments": [
+			"/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++",
+			"@/Users/alicia/Sites/Perfumery/.vscode/compileCommands_Perfumery/Perfumery.1.rsp"
+		],
+		"directory": "/Users/alicia/UnrealEngine/UE_5.4/Engine/Source"
+	},
+	{
+		"file": "/Users/alicia/Sites/Perfumery/Source/Perfumery/Core/TycoonPlayerController.h",
 		"arguments": [
 			"/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++",
 			"@/Users/alicia/Sites/Perfumery/.vscode/compileCommands_Perfumery/Perfumery.1.rsp"

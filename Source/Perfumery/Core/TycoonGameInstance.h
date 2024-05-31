@@ -4,22 +4,18 @@
 
 #include "CoreMinimal.h"
 #include "Engine/GameInstance.h"
-#include "PlayerInventoryComponent.h"
-#include "MainGameInstance.generated.h"
+#include "TycoonGameInstance.generated.h"
 
 UCLASS()
-class PERFUMERY_API UMainGameInstance : public UGameInstance
+class PERFUMERY_API UTycoonGameInstance : public UGameInstance
 {
 	GENERATED_BODY()
 
 public:
-	UMainGameInstance();
+    UTycoonGameInstance();
 
 	UFUNCTION(BlueprintCallable, Category = "Player")
 	float GetPlayerMoney() const;
-
-	UFUNCTION(BlueprintCallable, Category = "Player")
-	UPlayerInventoryComponent* GetInventoryComponent() const;
 
 	UFUNCTION(BlueprintCallable, Category = "Player")
     FString GetPlayerName() const { return PlayerName; }
@@ -36,7 +32,4 @@ protected:
 
     UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Player")
     float PlayerMoney;
-
-	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Player Inventory")
-	UPlayerInventoryComponent* InventoryComponent;
 };

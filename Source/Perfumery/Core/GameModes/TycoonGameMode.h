@@ -4,8 +4,8 @@
 
 #include "CoreMinimal.h"
 #include "GameFramework/GameModeBase.h"
-#include "IngredientStruct.h"
-#include "PerfumeStruct.h"
+#include "../Ingredient/IngredientStruct.h"
+#include "../Perfume/PerfumeStruct.h"
 #include "TycoonGameMode.generated.h"
 
 UCLASS()

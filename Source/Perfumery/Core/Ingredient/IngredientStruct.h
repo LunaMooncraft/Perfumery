@@ -3,7 +3,7 @@
 #pragma once
 
 #include "CoreMinimal.h"
-#include "ItemStruct.h"
+#include "../BaseStructs/ItemStruct.h"
 #include "IngredientStruct.generated.h"
 
 UENUM(BlueprintType)

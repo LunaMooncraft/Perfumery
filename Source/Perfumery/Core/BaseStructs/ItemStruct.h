@@ -14,7 +14,7 @@ struct FItemStruct : public FTableRowBase
 public:
     FItemStruct() : 
         ID(0), 
-        Name(TEXT("Default")), 
+        Name(TEXT("Name")), 
         Description(TEXT("Description")),
         Price(0.0f)
     {}
