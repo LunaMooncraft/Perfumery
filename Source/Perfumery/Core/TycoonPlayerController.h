@@ -5,9 +5,7 @@
 #include "CoreMinimal.h"
 #include "GameFramework/PlayerController.h"
 #include "PlayerMoney/PlayerMoneyHandler.h"
-#include "InputAction.h"
-#include "InputMappingContext.h"
-#include "Blueprint/UserWidget.h"
+#include "PlayerInventoryHandler.h"
 #include "TycoonPlayerController.generated.h"
 
 UCLASS()
@@ -21,4 +19,7 @@ public:
 private:
     UPROPERTY()
     UPlayerMoneyHandler* PlayerMoneyHandler;
+
+    UPROPERTY()
+    UPlayerInventoryHandler* PlayerInventoryHandler;
 };
