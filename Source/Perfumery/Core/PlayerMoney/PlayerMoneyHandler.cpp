@@ -3,24 +3,17 @@
 #include "PlayerMoneyHandler.h"
 #include "Blueprint/UserWidget.h"
 #include "UObject/ConstructorHelpers.h"
+#include "GameHelper.h" 
 
 UPlayerMoneyHandler::UPlayerMoneyHandler()
 {
-    static ConstructorHelpers::FClassFinder<UUserWidget> PlayerMoneyWidgetFinder(TEXT("/Game/UI/WBP_PlayerMoney.WBP_PlayerMoney_C"));
-    if (PlayerMoneyWidgetFinder.Succeeded())
-    {
-        PlayerMoneyWidgetClass = PlayerMoneyWidgetFinder.Class;
-    }
+    PlayerMoneyWidgetClass = UGameHelper::FindWidgetClass(TEXT("/Game/UI/WBP_PlayerMoney.WBP_PlayerMoney_C"));
 }
 
 void UPlayerMoneyHandler::Initialize(UWorld* World)
 {
     if (PlayerMoneyWidgetClass)
     {
-        PlayerMoneyWidgetInstance = CreateWidget<UUserWidget>(World, PlayerMoneyWidgetClass);
-        if (PlayerMoneyWidgetInstance != nullptr)
-        {
-            PlayerMoneyWidgetInstance->AddToViewport();
-        }
+        PlayerMoneyWidgetInstance = UGameHelper::AddWidgetToViewport(World->GetFirstPlayerController(), PlayerMoneyWidgetClass);
     }
 }

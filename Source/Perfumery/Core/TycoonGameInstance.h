@@ -23,13 +23,13 @@ public:
     UFUNCTION(BlueprintCallable, Category = "Player")
     UTexture2D* GetPlayerAvatar() const { return PlayerAvatar; }
 	
-protected:
-	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Player")
+private:
+	UPROPERTY()
     FString PlayerName;
 
-    UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Player")
+    UPROPERTY()
     UTexture2D* PlayerAvatar;
 
-    UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Player")
+    UPROPERTY()
     float PlayerMoney;
 };

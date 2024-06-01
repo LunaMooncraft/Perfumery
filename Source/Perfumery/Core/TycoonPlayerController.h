@@ -5,6 +5,9 @@
 #include "CoreMinimal.h"
 #include "GameFramework/PlayerController.h"
 #include "PlayerMoney/PlayerMoneyHandler.h"
+#include "InputAction.h"
+#include "InputMappingContext.h"
+#include "Blueprint/UserWidget.h"
 #include "TycoonPlayerController.generated.h"
 
 UCLASS()

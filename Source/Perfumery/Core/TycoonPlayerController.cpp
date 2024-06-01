@@ -2,6 +2,9 @@
 
 #include "TycoonPlayerController.h"
 #include "PlayerMoney/PlayerMoneyHandler.h"
+#include "GameHelper.h"
+#include "Blueprint/UserWidget.h"
+#include "InputMappingContext.h"
 
 void ATycoonPlayerController::BeginPlay()
 {
