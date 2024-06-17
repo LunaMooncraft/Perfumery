@@ -15,9 +15,6 @@ public:
     UTycoonGameInstance();
 
 	UFUNCTION(BlueprintCallable, Category = "Player")
-	float GetPlayerMoney() const;
-
-	UFUNCTION(BlueprintCallable, Category = "Player")
     FString GetPlayerName() const { return PlayerName; }
 
     UFUNCTION(BlueprintCallable, Category = "Player")
@@ -29,7 +26,4 @@ private:
 
     UPROPERTY()
     UTexture2D* PlayerAvatar;
-
-    UPROPERTY()
-    float PlayerMoney;
 };
